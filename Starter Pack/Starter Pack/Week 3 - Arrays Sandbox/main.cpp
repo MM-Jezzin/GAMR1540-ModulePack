@@ -52,7 +52,8 @@ int main()
     timesTable1[11] = 144;
 
     // Print the array using a for loop
-    for (int i = 0; i < 12; i++) {
+    for (int i = 0; i < 12; i++)
+    {
         cout << "12 x " << (i + 1) << " = " << timesTable1[i] << endl;
     }
     cout << endl;
@@ -60,7 +61,8 @@ int main()
     // 2️⃣ Declare and initialize the array at the same time
     int timesTable2[12] = { 12, 24, 36, 48, 60, 72, 84, 96, 108, 120, 132, 144 };
     // Print the array using a for loop
-    for (int i = 0; i < 12; i++) {
+    for (int i = 0; i < 12; i++) 
+    {
         cout << "12 x " << (i + 1) << " = " << timesTable2[i] << endl;
     }
     cout << endl;
@@ -69,15 +71,29 @@ int main()
     int timesTable3[12];
 
     // Set the numbers using a for loop
-    for (int i = 0; i < 12; i++) {
+    for (int i = 0; i < 12; i++) 
+    {
         timesTable3[i] = 12 * (i + 1);
     }
 
     // Print the numbers using a for loop
-    for (int i = 0; i < 12; i++) {
+    for (int i = 0; i < 12; i++)
+    {
         cout << "12 x " << (i + 1) << " = " << timesTable3[i] << endl;
     }
     cout << endl;
+
+    int number;
+    cout << "enter a number berween 1 and 12"; //gets user to enter a number
+    cin >> number;
+
+    if (number >= 1 && number <= 12) //checks if number is between 1 and 12
+    {
+        cout << "12 x" << number << " = " << timesTable3[number - 1] << endl; //prints "12 x" number user selected "=" then finds the number in the list, -1 because list starts at 0.
+    }
+    else
+    {
+        cout << "Error, enter a number between 1 and 12" << endl;
+    }
 	system("PAUSE");
     return 0;
-}
